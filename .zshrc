@@ -137,3 +137,32 @@ alias zed="/Applications/Zed.app/Contents/MacOS/cli"
 alias rzsh="source ~/scripts/.zshrc"
 alias ccdsp="claude --dangerously-skip-permissions"
 alias rc="~/scripts/restart_claude.zsh"
+
+# Added by Antigravity
+export PATH="/Users/nakulbhardwaj/.antigravity/antigravity/bin:$PATH"
+
+# opencode
+export PATH=/Users/nakulbhardwaj/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/nakulbhardwaj/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+eval "$(zoxide init zsh)"
